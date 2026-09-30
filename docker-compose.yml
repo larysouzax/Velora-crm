@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: Velora_postgres
+    environment:
+      POSTGRES_USER: velora
+      POSTGRES_PASSWORD: velora123
+      POSTGRES_DB: velora_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - velora_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  velora_postgres_data:
